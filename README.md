@@ -48,6 +48,16 @@ Example WMTS Link : http://**{s}**.google.com/vt/lyrs=m&x=**{x}**&y=**{y}**&z=**
  4. Please select Basemap
  5. You can try to push calculate for learning some results. 
  6. Finally if you sure for get all tiles please click to download button
+
+ ## Add a new MAP
+
+ 1. Push to add WMS Button
+ 2. Input a name ( My Basemap ) 
+ 3. Input Your Basemap Service URL Adres : ( like http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png) 
+ 4. Input your servers sub domain ( like a,b,c or another )
+ 5. Push to Show on the map than. 
+ 6. When you see your basemap on the map you can push to Add Button
+
 ## Some Links
  1. [My Blog](http://www.admin.alikilic.org/)
  2. [My Portfolio](http://www.portfolio.alikilic.org)
