@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Tile Downloader</title>
+
+    <meta name="keywords" content="online tile downloader, offline map, tile download, Google tile downloader, Openstreet Map Downloader, tilelayer downloader" />
+    <meta name="description" content="This application using for offline map. You can download Google, Open Street MAp Tiles">
+    <meta name="author" content="Ali KILIÇ" />
+    <link rel="image_src" href="http://www.sektorharita.com/img/site/sektorharitasosyal.jpg" />
+    <meta property="og:title" content="Online Tile Downloader" />
+    <meta property="og:type" content="program" />
+    <meta property="og:url" content="http://www.alikilic.org/tiledownloader/index.html" />
+    <meta property="og:site_name" content="Online Tile Downloader" />
+    <meta property="og:description" content="online tile downloader, offline map, tile download, Google tile downloader, Openstreet Map Downloader" />
+    <meta property="og:image" content="http://www.alikilic.org/tiledownloader/img/share.png" />    <meta name="content-language" content="en" />
+    <meta name="copyright" content="(c) 2016 alikilic.org All rights reserved. " />
+    <meta name="designer" content="Ali KILIÇ" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="General" />
+    <meta name="classification" content="Spare part" />
+    <meta name="Resource-Type" content="Document" />
+    <meta name="Subject" Content="Türkiyenin En Geniş Kapsamlı Haritacılık Sitesi"/>
+    <meta name="generator" content="vscode" />
+    <meta name="publisher" content="www.alikilic.org" />
+    <meta name="reply-to" content="alikilicharita@gmail.com" />
+    <meta name="revisit-after" content="1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="translate" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animasyon.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.pm@0.25.0/dist/leaflet.pm.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.pm@0.25.0/dist/leaflet.pm.min.js"></script>
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/FileSaver.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>   
+    <script type="text/javascript" src="js/jszip-utils.js"></script>
+</head>
+<body>
+    <div id="map" class="fullscreen"></div>
+    <div class="leftBottom">
+        <div class="btn-group" role="group">
+            <a href="index.html" class="btn btn-github btn-sm">Online Tile Downloader</a>
+            <a href="#" onclick="addBasemap();" class="btn btn-github btn-sm">Add Map</a>
+            <a href="http://www.portfolio.alikilic.org/" target="_blank" class="btn btn-primary btn-sm">Portfolio</a>
+            <a href="https://www.linkedin.com/in/alikilicharita/" target="_blank"  class="btn btn-social-icon btn-linkedin btn-sm"><span class="fa fa-linkedin"></span></a>
+            <a href="https://github.com/gislayer" target="_blank"  class="btn btn-social-icon btn-github btn-sm"><span class="fa fa-github"></span></a>
+          </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="js/mymap.js"></script>
+<script src="js/require.min.js"></script>
+<script>
+        require(['js/jszip.min.js'], function(file){
+            debugger;
+            console.log("JSZip Required", file);
+            window.JSZip = file;
+        });
+        require(['js/axios.min.js'], function(file){
+            debugger;
+            console.log("Axios Required", file);
+            window.axios = file;
+        });
+
+    </script>
